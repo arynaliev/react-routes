@@ -1,36 +1,39 @@
 import React from "react";
 import "./homePage.style.css";
 import { Route, Routes, Link } from "react-router-dom";
-// import { NotFoundPage, AboutUsPage, LoginPage } from "./pages";
-import LoginPage from "./pages";
+import { NotFoundPage, AboutUsPage, LoginPage } from "../../pages";
+import TodoApp from "../../applications/todoApp/TodoApp";
+import { mySecrets } from "../mySecrets/mySecrets";
+import { aboutMe } from "../aboutMe/aboutMe";
+import CounterApp from "../../applications/counterApp/CounterApp";
 
 const HomePage = () => {
   return (
     <>
       <div className="home-page-container">
         <div className="todo-app box">
-          <Link to={"/LoginPage"}>Todo App</Link>
+          <Link to={"/TodoApp"}>Todo App</Link>
         </div>
         <div className="counter-app box">
           <Link to={"/CounterApp"}>Counter App</Link>
         </div>
         <div className="my-secrets box">
-          <Link to={"/MySecrets"}>My Secrets</Link>
+          <Link to={"/mySecrets"}>My Secrets</Link>
         </div>
         <div className="about-me box">
-          <Link to={"/AboutMe"}>About Me</Link>
+          <Link to={"/aboutMe"}>About Me</Link>
         </div>
       </div>
 
       <Routes>
-        <Route path="/loginPage" element={<LoginPage />} />
-        {/* <Route>
-          <Route path="/accountPage" element={<AccountPage />} />
-        </Route> 
+        <Route path="/counterApp" element={<CounterApp />} />
         <Route>
-          <Route path="/adminPage" element={<AdminPage />} />
-  </Route>*/}
-        <Route path="/aboutMe" element={<AboutUsPage />} />
+          <Route path="/todoApp" element={<TodoApp />} />
+        </Route>
+        <Route>
+          <Route path="/mySecrets" element={mySecrets.first} />
+        </Route>
+        <Route path="/aboutMe" element={aboutMe} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </>

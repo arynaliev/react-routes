@@ -1,14 +1,7 @@
 import React, { createContext, useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
-import {
-  HomePage,
-  AccountPage,
-  NotFoundPage,
-  AboutUsPage,
-  LoginPage,
-  AdminPage,
-} from "./pages";
-import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
+// import { Route, Routes, Link } from "react-router-dom";
+import { HomePage } from "./pages";
+// import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
 import "./App.css";
 
@@ -20,6 +13,7 @@ function App() {
   return (
     <>
       <UserContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
+        <HomePage />
         {/* <nav>
           <ul style={{ display: "flex", gap: "10px", listStyle: "none" }}>
             <li>

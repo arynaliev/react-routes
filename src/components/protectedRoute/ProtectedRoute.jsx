@@ -5,7 +5,7 @@ import { UserContext } from "../../App";
 const ProtectedRoute = () => {
   const { isAuthenticated } = useContext(UserContext);
 
-  return isAuthenticated ? <Outlet /> : <Navigate to={"/login"} />;
+  return isAuthenticated ? <Outlet /> : <Navigate to={"/LoginPage"} />;
 };
 
 export default ProtectedRoute;

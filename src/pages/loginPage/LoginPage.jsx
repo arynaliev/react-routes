@@ -18,7 +18,9 @@ const LoginPage = () => {
     }
   };
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 
   return (
     <div>
