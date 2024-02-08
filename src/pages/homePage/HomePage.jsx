@@ -1,11 +1,6 @@
 import React from "react";
 import "./homePage.style.css";
-import { Route, Routes, Link } from "react-router-dom";
-// import { NotFoundPage, AboutUsPage, LoginPage } from "../../pages";
-// import TodoApp from "../../applications/todoApp/TodoApp";
-// import { mySecrets } from "../mySecrets/mySecrets";
-
-// import CounterApp from "../../applications/counterApp/CounterApp";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
