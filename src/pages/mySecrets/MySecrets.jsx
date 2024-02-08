@@ -19,4 +19,4 @@ const MySecrets = () => {
   );
 };
 
-export default mySecrets;
+export default MySecrets;

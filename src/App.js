@@ -7,6 +7,7 @@ import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
 import "./App.css";
 import TodoApp from "./applications/todoApp/TodoApp";
+import CounterApp from "./applications/counterApp/CounterApp";
 
 export const UserContext = createContext(null);
 
@@ -22,6 +23,7 @@ function App() {
           <Route>
             <Route path="/todoApp" element={<TodoApp />} />
           </Route>
+          <Route path="/counterApp" element={<CounterApp />} />
           <Route>
             <Route path="/mySecrets" element={<MySecrets />} />
           </Route>

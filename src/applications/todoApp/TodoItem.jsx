@@ -8,7 +8,9 @@ const TodoItem = ({ todo, onDelete }) => {
         <input type="checkbox" />
         <p>{todo.text} </p>
       </div>
-      <button onClick={() => onDelete(todo.id)}>X</button>
+      <button id="todoitem-btn" onClick={() => onDelete(todo.id)}>
+        X
+      </button>
     </div>
   );
 };

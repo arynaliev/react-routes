@@ -1,0 +1,9 @@
+.counter-app {
+  width: 20%;
+  display: flex;
+  gap: 1rem;
+}
+
+.counter-btn {
+  width: 2rem;
+}
