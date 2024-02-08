@@ -19,10 +19,29 @@ const LoginPage = () => {
   };
 
   const handleChange = (e) => {};
+
   return (
     <div>
       <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}></form>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Username</label>
+        <input
+          name="username"
+          value={user.username}
+          type="text"
+          onChange={handleChange}
+          required
+        />
+        <label htmlFor="password">Password</label>
+        <input
+          name="password"
+          value={user.password}
+          type="password"
+          onChange={handleChange}
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
     </div>
   );
 };

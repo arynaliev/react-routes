@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <UserContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
-        <nav>
+        {/* <nav>
           <ul style={{ display: "flex", gap: "10px", listStyle: "none" }}>
             <li>
               <Link to={"/"}>Home</Link>
@@ -35,11 +35,11 @@ function App() {
               <Link to={"/AccountPage"}>Account</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/loginPage" element={<LoginPage />} />
           <Route>
             <Route path="/accountPage" element={<AccountPage />} />
           </Route>
@@ -48,7 +48,7 @@ function App() {
           </Route>
           <Route path="/aboutUsPage" element={<AboutUsPage />} />
           <Route path="/*" element={<NotFoundPage />} />
-        </Routes>
+        </Routes> */}
       </UserContext.Provider>
     </>
   );
