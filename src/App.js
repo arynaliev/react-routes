@@ -1,9 +1,12 @@
 import React, { createContext, useState } from "react";
-// import { Route, Routes, Link } from "react-router-dom";
-import { HomePage } from "./pages";
+import { Route, Routes } from "react-router-dom";
+import { HomePage, LoginPage, NotFoundPage } from "./pages";
+import { aboutMe } from "./pages/aboutMe/aboutMe";
+import { mySecrets } from "./pages/mySecrets/mySecrets";
 // import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
 import "./App.css";
+import TodoApp from "./applications/todoApp/TodoApp";
 
 export const UserContext = createContext(null);
 
@@ -13,36 +16,18 @@ function App() {
   return (
     <>
       <UserContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
-        <HomePage />
-        {/* <nav>
-          <ul style={{ display: "flex", gap: "10px", listStyle: "none" }}>
-            <li>
-              <Link to={"/"}>Home</Link>
-            </li>
-            <li>
-              <Link to={"/LoginPage"}>Login</Link>
-            </li>
-            <li>
-              <Link to={"/AboutUsPage"}>About Us</Link>
-            </li>
-            <li>
-              <Link to={"/AccountPage"}>Account</Link>
-            </li>
-          </ul>
-        </nav> */}
-
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/loginPage" element={<LoginPage />} />
+          {/* <Route path="/loginPage" element={<LoginPage />} /> */}
           <Route>
-            <Route path="/accountPage" element={<AccountPage />} />
+            <Route path="/todoApp" element={<TodoApp />} />
           </Route>
           <Route>
-            <Route path="/adminPage" element={<AdminPage />} />
+            <Route path="/mySecrets" element={mySecrets.first} />
           </Route>
-          <Route path="/aboutUsPage" element={<AboutUsPage />} />
+          <Route path="/aboutMe" element={aboutMe} />
           <Route path="/*" element={<NotFoundPage />} />
-        </Routes> */}
+        </Routes>
       </UserContext.Provider>
     </>
   );

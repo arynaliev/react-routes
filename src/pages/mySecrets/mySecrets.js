@@ -1,5 +1,7 @@
+import React from "react";
+
 export const mySecrets = {
-  first: "",
-  second: "",
+  first: "azim",
+  second: "heey",
   third: "",
 };
