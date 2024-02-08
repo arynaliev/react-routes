@@ -4,36 +4,22 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <>
-      <div className="home-page-container">
-        <div className="todo-app box">
-          <Link to={"/TodoApp"} target="blank">
-            Todo App
-          </Link>
-        </div>
-        <div className="counter-app box">
-          <Link to={"/CounterApp"}>Counter App</Link>
-        </div>
-        <div className="my-secrets box">
-          <Link to={"/mySecrets"}>My Secrets</Link>
-        </div>
-        <div className="about-me box">
-          <Link to={"/aboutMe"}>About Me</Link>
-        </div>
+    <div className="home-page-container">
+      <div className="todo-app boxes">
+        <Link to={"/TodoApp"} target="blank">
+          Todo App
+        </Link>
       </div>
-
-      {/* <Routes>
-        <Route path="/counterApp" element={<CounterApp />} />
-        <Route>
-          <Route path="/todoApp" element={<TodoApp />} />
-        </Route>
-        <Route>
-          <Route path="/mySecrets" element={mySecrets.first} />
-        </Route>
-        <Route path="/aboutMe" element={mySecrets.second} />
-        <Route path="/*" element={<NotFoundPage />} />
-      </Routes> */}
-    </>
+      <div className="counter-app boxes">
+        <Link to={"/CounterApp"}>Counter App</Link>
+      </div>
+      <div className="my-secrets boxes">
+        <Link to={"/mySecrets"}>My Secrets</Link>
+      </div>
+      <div className="about-me boxes">
+        <Link to={"/aboutMe"}>About Me</Link>
+      </div>
+    </div>
   );
 };
 

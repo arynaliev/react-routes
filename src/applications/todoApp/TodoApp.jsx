@@ -29,15 +29,18 @@ const TodoApp = () => {
   };
 
   return (
-    <div>
+    <div className="todo-app">
       <div className="box">
         <input
+          id="todo-input"
           type="text"
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Add a new todo..."
         />
-        <button onClick={addClick}>Add</button>
+        <button id="todo-btn" onClick={addClick}>
+          Add
+        </button>
       </div>
       <ul>{renderTodoList()}</ul>
     </div>
