@@ -1,8 +1,6 @@
 import React, { createContext, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { HomePage, LoginPage, MySecrets, NotFoundPage, AboutMe } from "./pages";
-// import AboutMe, { aboutMe } from "./pages/aboutMe/aboutMe";
-// import { mySecrets } from "./pages/mySecrets/MySecrets";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 
 import "./App.css";
